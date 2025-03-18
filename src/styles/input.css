@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
-.btn {
-  border-radius: 6px;
+@layer components {
+  .btn {
+    background-color: var(--color-stone-200);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+  }
+  .btn:hover {
+    cursor: pointer;
+    background-color: var(--color-stone-300);
+  }
 }
