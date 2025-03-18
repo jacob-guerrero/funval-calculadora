@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/output.css" />
+    <script src="./src/scripts/script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="w-full h-lvh p-4 md:p-10 flex flex-col gap-2">
+      <h1 class="text-center text-2xl font-bold md:text-4xl">Calculadora</h1>
+
+      <div
+        id="container"
+        class="w-full max-w-md h-max p-4 flex flex-col items-center gap-4 m-auto border rounded-md border-s-stone-400"
+      >
+        <div
+          id="display"
+          class="w-[80vw] h-10 p-1 max-w-sm text-2xl font-bold flex justify-start items-center border border-s-stone-400 overflow-hidden md:h-14"
+        >
+          <p></p>
+        </div>
+
+        <div
+          id="panel"
+          class="w-[80vw] h-[80vw] max-w-sm max-h-96 md:h-[45vw] text-2xl flex gap-1"
+        >
+          <div
+            class="numbers w-8/10 grid grid-cols-3 justify-center items-center gap-1"
+          >
+            <div
+              class="btn number bg-stone-200 w-full h-full flex items-center justify-center"
+            >
+              7
+            </div>
+            <div
+              class="btn number bg-stone-200 w-full h-full flex items-center justify-center"
+            >
+              8
+            </div>
+            <div
+              class="btn number bg-stone-200 w-full h-full flex items-center justify-center"
+            >
+              9
+            </div>
+            <div
+              class="btn number bg-stone-200 w-full h-full flex items-center justify-center"
+            >
+              4
+            </div>
+            <div
+              class="btn number bg-stone-200 w-full h-full flex items-center justify-center"
+            >
+              5
+            </div>
+            <div
+              class="btn number bg-stone-200 w-full h-full flex items-center justify-center"
+            >
+              6
+            </div>
+            <div
+              class="btn number bg-stone-200 w-full h-full flex items-center justify-center"
+            >
+              1
+            </div>
+            <div
+              class="btn number bg-stone-200 w-full h-full flex items-center justify-center"
+            >
+              2
+            </div>
+            <div
+              class="btn number bg-stone-200 w-full h-full flex items-center justify-center"
+            >
+              3
+            </div>
+            <div
+              class="btn point bg-stone-200 w-full h-full flex items-center justify-center"
+            >
+              -
+            </div>
+            <div
+              class="btn number bg-stone-200 w-full h-full flex items-center justify-center"
+            >
+              0
+            </div>
+            <div
+              class="btn equal bg-stone-200 w-full h-full flex items-center justify-center"
+            >
+              +
+            </div>
+          </div>
+          <div
+            class="controls w-2/10 flex flex-col justify-center items-center gap-1"
+          >
+            <div
+              class="btn erase bg-stone-200 w-full h-full flex items-center justify-center"
+            >
+              CE
+            </div>
+            <div
+              class="btn clear bg-stone-200 w-full h-full flex items-center justify-center"
+            >
+              AC
+            </div>
+            <div
+              class="btn operator bg-stone-200 w-full h-full flex items-center justify-center"
+            >
+              ÷
+            </div>
+            <div
+              class="btn operator bg-stone-200 w-full h-full flex items-center justify-center"
+            >
+              x
+            </div>
+            <div
+              class="btn operator bg-stone-200 w-full h-full flex items-center justify-center"
+            >
+              =
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
