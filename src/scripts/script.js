@@ -23,6 +23,17 @@ function getNumber(e) {
 
 function getOperator(e) {
   if (digit === "") return; // Validamos si hay un número para operar
+  let lastChar = display.textContent.slice(-1);
+  if (
+    lastChar === "*" ||
+    lastChar === "/" ||
+    lastChar === "+" ||
+    lastChar === "-"
+  ) {
+    digit = digit.slice(0, -1) + e.target.textContent;
+    display.textContent = digit;
+    return; // Validamos si hay algo que calcular
+  }
 
   // Simplemente guardamos lo mostrado en pantalla
   digit += e.target.textContent;
@@ -40,10 +51,18 @@ function getResult(e) {
   )
     return; // Validamos si hay algo que calcular
 
+  // Validación división por 0
+  if (digit.includes("/") && digit.slice(digit.indexOf("/") + 1) === "0") {
+    alert("No se puede dividir entre 0!");
+    clear();
+    return;
+  }
+
   // Usamos eval para evaluar la operación
   currentValue = eval(`${digit}`);
   display.textContent = `${+currentValue.toFixed(6)}`;
   digit = currentValue;
+  console.log(digit, currentValue);
 }
 
 function clear() {
